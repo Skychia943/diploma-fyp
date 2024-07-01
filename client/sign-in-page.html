@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In Page</title>
+  <link href="css/sign-in.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <img alt="Cozy Corner Hostel Logo" class="logo" src="images/logo.png">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Room Booking</a></li>
+      <li><a href="#">Staff Management</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <div class="dropdown">
+      <button class="dropbtn">User</button>
+      <div class="dropdown-content">
+        <a href="sign-in-page.html">Sign In</a>
+        <a href="sign-up-page.html">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="centered-content">
+  <div class="form-input">
+    <form action="index.html">
+      <h1>Sign In</h1>
+      <div class="text-box">
+        <input name="uname" placeholder="Username" required type="text">
+      </div>
+      <div class="text-box">
+        <input name="psw" placeholder="Password" required type="password">
+      </div>
+
+      <div class="remember-forgot">
+
+        <label><input type="checkbox"> Remember me</label>
+
+        <a href="forgot.html"> Forgot Password? </a>
+      </div>
+
+      <button class="btn" type="submit">Sign In</button>
+
+      <div class="register-link">
+        <p>Don't have a account? <a href="sign-up-page.html">Register</a></p>
+      </div>
+
+    </form>
+  </div>
+</div>
+</body>
+</html>
+<script>
+  var inputField = document.querySelector('.text-box input')
+  var placeholderText = inputField.placeholder
+
+  inputField.onfocus = function () {
+    this.placeholder = ''
+  }
+
+  inputField.onblur = function () {
+    if (this.value == '')
+      this.placeholder = placeholderText
+  }
+
+  var inputFields = document.querySelectorAll('.text-box input')
+
+  inputFields.forEach(function (inputField) {
+    var placeholderText = inputField.placeholder
+
+    inputField.onfocus = function () {
+      this.placeholder = ''
+    }
+
+    inputField.onblur = function () {
+      if (this.value == '')
+        this.placeholder = placeholderText
+    }
+  })
+</script>

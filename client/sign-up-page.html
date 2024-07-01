@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up Page</title>
+  <link href="css/sign-up.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <img alt="Cozy Corner Hostel Logo" class="logo" src="images/logo.png">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Room Booking</a></li>
+      <li><a href="#">Staff Management</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+    <div class="dropdown">
+      <button class="dropbtn">User</button>
+      <div class="dropdown-content">
+        <a href="sign-in-page.html">Sign In</a>
+        <a href="sign-up-page.html">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="centered-content">
+  <div class="form-input">
+    <form id="signup-form" action="index.html">
+
+      <h1>Sign Up</h1>
+
+      <div class="text-box">
+        <input class="signup-email" placeholder="Email" required type="email">
+      </div>
+
+      <div class="text-box">
+        <input class="signup-username" placeholder="Username" required type="text">
+      </div>
+
+      <div class="text-box">
+        <input class="signup-password" placeholder="Password" required type="password">
+      </div>
+
+      <div class="text-box">
+        <input class="signup-confirm-password" placeholder="Repeat Password" required type="password">
+      </div>
+
+      <div class="term-privacy">
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      </div>
+
+      <div class="remember">
+        <label><input type="checkbox"> Remember me</label>
+      </div>
+
+      <div class="sign-in">
+        <p>Already have a account? <a href="sign-in-page.html">Sign In</a></p>
+      </div>
+
+      <button id="signup-button" class="btn" type="submit">Sign Up</button>
+
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
+
+<script>
+  var inputField = document.querySelector('.text-box input')
+  var placeholderText = inputField.placeholder
+
+  inputField.onfocus = function () {
+    this.placeholder = ''
+  }
+
+  inputField.onblur = function () {
+    if (this.value == '')
+      this.placeholder = placeholderText
+  }
+
+  var inputFields = document.querySelectorAll('.text-box input')
+
+  inputFields.forEach(function (inputField) {
+    var placeholderText = inputField.placeholder
+
+    inputField.onfocus = function () {
+      this.placeholder = ''
+    }
+
+    inputField.onblur = function () {
+      if (this.value == '')
+        this.placeholder = placeholderText
+    }
+  })
+</script>
+
+<script src="js/signupHandler.js"></script>

@@ -1,0 +1,143 @@
+.container {
+  background-color: #dedcff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.footer__container {
+  margin: 1.5rem 1.5rem 3rem 1.5rem;
+}
+
+.port__contact,
+.nav__social {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.nav__social {
+  margin-top: 2rem;
+}
+
+/* <!-- ======= PORTFOLIO FOOTER TITLE ======== --> */
+
+.footer__link {
+  color: var(--accent);
+}
+
+.label__container {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  gap: 0.25rem;
+}
+
+.label__description {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/* <!-- ======== CONTACT INFORMATION ========= --> */
+
+.contact__information {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.bxs-phone,
+.bxs-envelope,
+.bxs-location-plus {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+/* <!-- ======== NAV LINK ======== --> */
+
+.nav__container {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+.nav__container a {
+  font-size: 0.8rem;
+  color: black;
+  width: max-content;
+}
+
+/* <!-- ======== SOCIAL LINKS ========= --> */
+
+.bxl-instagram-alt,
+.bxl-facebook-square,
+.bxl-linkedin-square {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+.social__links,
+.nav__container {
+  margin-top: 0.5rem;
+}
+
+.social__title span,
+.nav__label span,
+.contact__label span {
+  position: relative;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.social__title span::after,
+.nav__label span::after,
+.contact__label span::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: var(--accent);
+  bottom: -3px;
+  left: 0;
+  border-radius: 0.25rem;
+}
+
+/* ======== RESPOSIVE DESIGN ========= */
+
+@media screen and (min-width: 576px) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .nav__social {
+    margin-top: 0;
+  }
+
+  .nav__description {
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .port__contact {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav__social {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer__container {
+    margin: 1.5rem 0 3rem 0;
+  }
+}
